@@ -10,8 +10,8 @@ import { message, Select, UploadProps } from 'antd';
 import React, { useState } from 'react';
 import { userRole, UserRoleEnum } from '@/enums/UserRoleEnum';
 import { FileUploadBiz } from '@/enums/FileUploadBizEnum';
-import {updateUser} from '@/services/stephen-backend/userController';
-import {uploadFile} from '@/services/stephen-backend/fileController';
+import {updateUser} from '@/services/oj-backend/userController';
+import {uploadFile} from '@/services/oj-backend/fileController';
 
 interface Props {
   oldData?: API.User;

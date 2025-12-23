@@ -10,8 +10,8 @@ import { message, Select, UploadProps } from 'antd';
 import React, { useState } from 'react';
 import { userRole, UserRoleEnum } from '@/enums/UserRoleEnum';
 import { FileUploadBiz } from '@/enums/FileUploadBizEnum';
-import {addUser} from '@/services/stephen-backend/userController';
-import {uploadFile} from '@/services/stephen-backend/fileController';
+import {addUser} from '@/services/oj-backend/userController';
+import {uploadFile} from '@/services/oj-backend/fileController';
 
 interface Props {
   onCancel: () => void;

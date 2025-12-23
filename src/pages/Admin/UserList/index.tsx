@@ -4,7 +4,7 @@ import { Button, message, Popconfirm, Space, Tag, Typography } from 'antd';
 import React, { useRef, useState } from 'react';
 import { userRole, UserRoleEnum } from '@/enums/UserRoleEnum';
 import { CreateUserModal, UpdateUserModal } from '@/pages/Admin/UserList/components';
-import {deleteUser, listUserByPage} from '@/services/stephen-backend/userController';
+import {deleteUser, listUserByPage} from '@/services/oj-backend/userController';
 
 /**
  * 删除节点

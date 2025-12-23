@@ -4,7 +4,7 @@ import React from 'react';
 import Settings from '../config/defaultSettings';
 import { UnAccessiblePage } from '@/pages/Exception';
 import { requestConfig } from '@/requestConfig';
-import { getLoginUser } from '@/services/stephen-backend/userController';
+import { getLoginUser } from '@/services/oj-backend/userController';
 
 const loginPath = '/user/login';
 

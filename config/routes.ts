@@ -1,7 +1,5 @@
 export default [
-  { path: '/', redirect: '/welcome' },
-  { path: '/welcome', name: '主页', icon: 'smile', component: './Welcome' },
-  { path: '/post/:id', name: '帖子', hideInMenu: true, component: './Post' },
+  { path: '/', redirect: '/admin' },
   {
     path: '/admin',
     name: '管理页',
@@ -10,15 +8,7 @@ export default [
     routes: [
       { path: '/admin', redirect: '/admin/user' },
       { name: '用户管理', path: '/admin/user', component: './Admin/UserList' },
-      { name: '帖子管理', path: '/admin/post', component: './Admin/PostList' },
-      { name: '标签管理', path: '/admin/tag', component: './Admin/TagList' },
     ],
-  },
-  {
-    path: '/create',
-    name: '创建页面',
-    icon: 'AppstoreAddOutlined',
-    routes: [{ name: '创建帖子', path: '/create/post', component: './Create/Post' }],
   },
   {
     path: '/account',

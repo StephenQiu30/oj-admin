@@ -5,7 +5,7 @@ import { message } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { createStyles } from 'antd-style';
 import { BACKGROUND_IMAGE, STEPHEN_SUBTITLE, STEPHEN_TITLE } from '@/constants';
-import { userRegister } from '@/services/stephen-backend/userController';
+import { userRegister } from '@/services/oj-backend/userController';
 import RegisterPage from '@/pages/User/Register/components/RegisterPage';
 
 const useStyles = createStyles(({ token }) => {

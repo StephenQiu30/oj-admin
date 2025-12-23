@@ -2,7 +2,7 @@ import { FileUploadBiz } from '@/enums/FileUploadBizEnum';
 import React, { useRef } from 'react';
 import { Card } from 'antd';
 import { MarkdownEditor, MarkdownEditorInstance } from '@ant-design/md-editor';
-import { uploadFile } from '@/services/stephen-backend/fileController';
+import { uploadFile } from '@/services/oj-backend/fileController';
 
 const uploadImage = async (fileList: File[] | string[]): Promise<string[]> => {
   try {

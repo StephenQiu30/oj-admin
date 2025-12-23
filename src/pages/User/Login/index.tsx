@@ -7,7 +7,7 @@ import { createStyles } from 'antd-style';
 import { BACKGROUND_IMAGE, STEPHEN_SUBTITLE, STEPHEN_TITLE } from '@/constants';
 import { AlipayOutlined, TaobaoOutlined, WeiboOutlined } from '@ant-design/icons';
 import { AccountLoginPage, PhoneLoginPage } from '@/pages/User/Login/components';
-import { userLogin } from '@/services/stephen-backend/userController';
+import { userLogin } from '@/services/oj-backend/userController';
 
 const useStyles = createStyles(({ token }) => {
   return {

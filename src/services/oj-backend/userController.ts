@@ -103,21 +103,6 @@ export async function userLogin(body: API.UserLoginRequest, options?: { [key: st
   });
 }
 
-/** 此处后端没有提供注释 GET /user/login/wx_open */
-export async function userLoginByWxOpen(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
-  params: API.userLoginByWxOpenParams,
-  options?: { [key: string]: any },
-) {
-  return request<API.BaseResponseLoginUserVO>('/user/login/wx_open', {
-    method: 'GET',
-    params: {
-      ...params,
-    },
-    ...(options || {}),
-  });
-}
-
 /** 此处后端没有提供注释 POST /user/logout */
 export async function userLogout(options?: { [key: string]: any }) {
   return request<API.BaseResponseBoolean>('/user/logout', {

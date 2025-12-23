@@ -9,8 +9,8 @@ import {
 } from '@ant-design/pro-components';
 import { AntDesignOutlined } from '@ant-design/icons';
 import { FileUploadBiz } from '@/enums/FileUploadBizEnum';
-import { updateUser } from '@/services/stephen-backend/userController';
-import { uploadFile } from '@/services/stephen-backend/fileController';
+import { updateUser } from '@/services/oj-backend/userController';
+import { uploadFile } from '@/services/oj-backend/fileController';
 
 interface BaseViewProps {
   user: API.UserVO;

@@ -7,17 +7,5 @@ import Footer from './Footer';
 import { AvatarDropdown, AvatarName } from './RightContent/AvatarDropdown';
 import { MdEditor, MdViewer } from '@/components/Markdown';
 import { UserCard } from '@/components/ReUser';
-import { ActionTabbar, PostCard, PostAvatarCard, PostTitleCard } from '@/components/RePost';
 
-export {
-  Footer,
-  AvatarDropdown,
-  AvatarName,
-  MdViewer,
-  MdEditor,
-  PostCard,
-  ActionTabbar,
-  UserCard,
-  PostAvatarCard,
-  PostTitleCard
-};
+export { Footer, AvatarDropdown, AvatarName, MdViewer, MdEditor, UserCard };
