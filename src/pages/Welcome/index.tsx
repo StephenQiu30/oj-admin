@@ -6,7 +6,7 @@ import { PageContainer } from '@ant-design/pro-components';
  * @constructor
  */
 const Welcome: React.FC = () => {
-  return <PageContainer title={false}></PageContainer>;
+  return <PageContainer></PageContainer>;
 };
 
 export default Welcome;

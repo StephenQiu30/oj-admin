@@ -67,6 +67,7 @@ const CreateUserModal: React.FC<Props> = (props) => {
       try {
         const res = await uploadFile(
           {
+            // @ts-ignore
             biz: FileUploadBiz.USER_AVATAR,
           },
           {

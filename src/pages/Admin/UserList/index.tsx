@@ -54,11 +54,6 @@ const UserList: React.FC = () => {
       hideInForm: true,
     },
     {
-      title: '账号',
-      dataIndex: 'userAccount',
-      valueType: 'text',
-    },
-    {
       title: '用户名',
       dataIndex: 'userName',
       valueType: 'text',
@@ -75,6 +70,16 @@ const UserList: React.FC = () => {
     {
       title: '邮箱',
       dataIndex: 'userEmail',
+      valueType: 'text',
+    },
+    {
+      title: '',
+      dataIndex: 'userPhone',
+      valueType: 'text',
+    },
+    {
+      title: '简介',
+      dataIndex: 'userProfile',
       valueType: 'text',
     },
     {
