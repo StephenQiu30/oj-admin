@@ -123,7 +123,6 @@ const CreateUserModal: React.FC<Props> = (props) => {
       <ProFormText name={'userAccount'} label={'账号'} />
       <ProFormText name={'userName'} label={'用户名'} />
       <ProFormTextArea name={'userProfile'} label={'简介'} />
-      <ProFormText name={'userPhone'} label={'电话'} />
       <ProFormText name={'userEmail'} label={'邮箱'} />
       <ProFormUploadDragger
         title={'上传头像'}

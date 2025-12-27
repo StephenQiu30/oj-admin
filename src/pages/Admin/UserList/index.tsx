@@ -73,16 +73,6 @@ const UserList: React.FC = () => {
       valueType: 'text',
     },
     {
-      title: '',
-      dataIndex: 'userPhone',
-      valueType: 'text',
-    },
-    {
-      title: '简介',
-      dataIndex: 'userProfile',
-      valueType: 'text',
-    },
-    {
       title: '权限',
       dataIndex: 'userRole',
       valueEnum: userRole,
@@ -189,7 +179,6 @@ const UserList: React.FC = () => {
         }}
         columns={columns}
       />
-
       {/*新建表单的Modal框*/}
       {createModalVisible && (
         <CreateUserModal
