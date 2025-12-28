@@ -33,6 +33,22 @@ declare namespace API {
     message?: string;
   };
 
+  type BaseResponsePageQuestionSubmit = {
+    /** 状态码 */
+    code?: number;
+    data?: PageQuestionSubmit;
+    /** 消息 */
+    message?: string;
+  };
+
+  type BaseResponsePageQuestionSubmitVO = {
+    /** 状态码 */
+    code?: number;
+    data?: PageQuestionSubmitVO;
+    /** 消息 */
+    message?: string;
+  };
+
   type BaseResponsePageQuestionVO = {
     /** 状态码 */
     code?: number;
@@ -53,6 +69,14 @@ declare namespace API {
     /** 状态码 */
     code?: number;
     data?: PageUserVO;
+    /** 消息 */
+    message?: string;
+  };
+
+  type BaseResponseQuestionSubmitVO = {
+    /** 状态码 */
+    code?: number;
+    data?: QuestionSubmitVO;
     /** 消息 */
     message?: string;
   };
@@ -95,6 +119,10 @@ declare namespace API {
     id?: number;
   };
 
+  type getQuestionSubmitVOByIdParams = {
+    id: number;
+  };
+
   type getQuestionVOByIdParams = {
     id: number;
   };
@@ -117,10 +145,19 @@ declare namespace API {
   type JudgeConfig = {
     /** 时间限制（ms） */
     timeLimit?: number;
-    /** 内存限制（KB） */
+    /** 内存限制（kb） */
     memoryLimit?: number;
-    /** 堆栈限制（KB） */
+    /** 堆栈限制（kb） */
     stackLimit?: number;
+  };
+
+  type JudgeInfo = {
+    /** 判题信息 */
+    message?: string;
+    /** 时间（ms） */
+    time?: number;
+    /** 内存（kb） */
+    memory?: number;
   };
 
   type LoginUserVO = {
@@ -155,6 +192,34 @@ declare namespace API {
     orders?: OrderItem[];
     optimizeCountSql?: PageQuestion;
     searchCount?: PageQuestion;
+    optimizeJoinOfCountSql?: boolean;
+    maxLimit?: number;
+    countId?: string;
+    pages?: number;
+  };
+
+  type PageQuestionSubmit = {
+    records?: QuestionSubmit[];
+    total?: number;
+    size?: number;
+    current?: number;
+    orders?: OrderItem[];
+    optimizeCountSql?: PageQuestionSubmit;
+    searchCount?: PageQuestionSubmit;
+    optimizeJoinOfCountSql?: boolean;
+    maxLimit?: number;
+    countId?: string;
+    pages?: number;
+  };
+
+  type PageQuestionSubmitVO = {
+    records?: QuestionSubmitVO[];
+    total?: number;
+    size?: number;
+    current?: number;
+    orders?: OrderItem[];
+    optimizeCountSql?: PageQuestionSubmitVO;
+    searchCount?: PageQuestionSubmitVO;
     optimizeJoinOfCountSql?: boolean;
     maxLimit?: number;
     countId?: string;
@@ -293,6 +358,107 @@ declare namespace API {
     answer?: string;
     /** 创建用户id */
     userId?: number;
+  };
+
+  type QuestionSubmit = {
+    id?: number;
+    /** 编程语言 */
+    language?: string;
+    /** 用户代码 */
+    code?: string;
+    /** 判题信息(json对象) */
+    judgeInfo?: string;
+    /** 判题信息(0-待判题，1-判题中，2-成功，3-失败) */
+    status?: number;
+    /** 题目id */
+    questionId?: number;
+    /** 创建用户id */
+    userId?: number;
+    /** 创建时间 */
+    createTime?: string;
+    /** 更新时间 */
+    updateTime?: string;
+    /** 是否删除 */
+    isDelete?: number;
+  };
+
+  type QuestionSubmitAddRequest = {
+    /** 编程语言 */
+    language?: string;
+    /** 用户代码 */
+    code?: string;
+    /** 题目id */
+    questionId?: number;
+  };
+
+  type QuestionSubmitEditRequest = {
+    /** id */
+    id?: number;
+    /** 编程语言 */
+    language?: string;
+    /** 用户代码 */
+    code?: string;
+  };
+
+  type QuestionSubmitQueryRequest = {
+    /** 当前页号 */
+    current?: number;
+    /** 页面大小 */
+    pageSize?: number;
+    /** 排序字段 */
+    sortField?: string;
+    /** 排序顺序（默认升序） */
+    sortOrder?: string;
+    /** id */
+    id?: number;
+    /** notId */
+    notId?: number;
+    /** 搜索词 */
+    searchText?: string;
+    /** 编程语言 */
+    language?: string;
+    /** 用户代码 */
+    code?: string;
+    /** 判题信息(json对象) */
+    judgeInfo?: JudgeInfo[];
+    /** 判题信息(0-待判题，1-判题中，2-成功，3-失败) */
+    status?: number;
+    /** 题目id */
+    questionId?: number;
+    /** 创建用户id */
+    userId?: number;
+  };
+
+  type QuestionSubmitUpdateRequest = {
+    /** id */
+    id?: number;
+    /** 编程语言 */
+    language?: string;
+    /** 用户代码 */
+    code?: string;
+  };
+
+  type QuestionSubmitVO = {
+    /** id */
+    id?: number;
+    /** 编程语言 */
+    language?: string;
+    /** 用户代码 */
+    code?: string;
+    /** 判题信息(json对象) */
+    judgeInfo?: JudgeInfo[];
+    /** 判题信息(0-待判题，1-判题中，2-成功，3-失败) */
+    status?: number;
+    /** 题目id */
+    questionId?: number;
+    /** 创建用户id */
+    userId?: number;
+    /** 创建时间 */
+    createTime?: string;
+    /** 更新时间 */
+    updateTime?: string;
+    userVO?: UserVO;
+    questionVO?: QuestionVO;
   };
 
   type QuestionUpdateRequest = {
