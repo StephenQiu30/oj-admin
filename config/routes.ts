@@ -9,6 +9,7 @@ export default [
       { path: '/admin', redirect: '/admin/user' },
       { name: '用户管理', path: '/admin/user', component: './Admin/UserList' },
       { name: '题目管理', path: '/admin/question', component: './Admin/QuestionList' },
+      { name: '题目提交管理', path: '/admin/question/submit', component: './Admin/QuestionSubmitList' },
     ],
   },
   {
